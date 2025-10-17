@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <style>
         :root {
@@ -117,14 +119,11 @@
             font-size: 3.5rem;
             font-weight: 700;
             margin-bottom: 20px;
-            animation: fadeInUp 1s ease;
         }
         
         .hero p {
             font-size: 1.2rem;
             margin-bottom: 30px;
-            animation: fadeInUp 1s ease 0.2s;
-            animation-fill-mode: both;
         }
         
         .btn-hero {
@@ -132,8 +131,6 @@
             font-weight: 600;
             border-radius: 50px;
             transition: all 0.3s ease;
-            animation: fadeInUp 1s ease 0.4s;
-            animation-fill-mode: both;
         }
         
         .btn-primary-custom {
@@ -448,53 +445,6 @@
             transform: translateY(-3px);
         }
         
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        /* Scroll animations with CSS only */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-        
-        /* CSS only scroll detection */
-        .fade-in {
-            animation: fadeIn 0.6s ease forwards;
-            animation-delay: 0.2s;
-        }
-        
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        /* Stagger animation for skill cards */
-        .skill-card:nth-child(1) { animation-delay: 0.1s; }
-        .skill-card:nth-child(2) { animation-delay: 0.2s; }
-        .skill-card:nth-child(3) { animation-delay: 0.3s; }
-        .skill-card:nth-child(4) { animation-delay: 0.4s; }
-        
-        /* Stagger animation for project cards */
-        .project-card:nth-child(1) { animation-delay: 0.1s; }
-        .project-card:nth-child(2) { animation-delay: 0.2s; }
-        .project-card:nth-child(3) { animation-delay: 0.3s; }
-        
         /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
@@ -564,10 +514,10 @@
         <div class="container">
             <div class="row align-items-center min-vh-100">
                 <div class="col-12 hero-content">
-                    <h1>Hello, I'm <span style="color: #f97316;">Ghulam Mustafa</span></h1>
-                    <p>Passionate Web Developer & Teaching Assistant</p>
-                    <p>I create beautiful, functional websites and help others learn the art of web development.</p>
-                    <div class="d-flex justify-content-center">
+                    <h1 data-aos="fade-up" data-aos-duration="1000">Hello, I'm <span style="color: #f97316;">Ghulam Mustafa</span></h1>
+                    <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Passionate Web Developer & Teaching Assistant</p>
+                    <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">I create beautiful, functional websites and help others learn the art of web development.</p>
+                    <div class="d-flex justify-content-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
                         <a href="#projects" class="btn btn-hero btn-primary-custom">View My Work</a>
                         <a href="#contact" class="btn btn-hero btn-outline-custom">Contact Me</a>
                     </div>
@@ -579,11 +529,11 @@
     <!-- About Section -->
     <section id="about" class="section">
         <div class="container">
-            <div class="row align-items-center fade-in">
-                <div class="col-lg-6 mb-4 mb-lg-0">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="flip-left" data-aos-duration="1000">
                     <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="About Me" class="img-fluid about-img">
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
                     <h2 class="section-title">About Me</h2>
                     <p class="section-subtitle">Passionate young IT learner skilled in HTML, CSS, and Bootstrap.</p>
                     <p>I'm currently serving as an Assistant Teaching Intern at an IT Center, where I help instructors teach web development and guide students in solving coding problems. I'm known for my quick learning abilities, teamwork, and dedication to growing in the technology field.</p>
@@ -618,12 +568,12 @@
     <!-- Skills Section -->
     <section id="skills" class="section skills-section">
         <div class="container">
-            <div class="text-center mb-5 fade-in">
-                <h2 class="section-title mx-auto">My Skills</h2>
-                <p class="section-subtitle">Technologies I'm proficient with</p>
+            <div class="text-center mb-5">
+                <h2 class="section-title mx-auto" data-aos="zoom-in" data-aos-duration="1000">My Skills</h2>
+                <p class="section-subtitle" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">Technologies I'm proficient with</p>
             </div>
             <div class="row g-4">
-                <div class="col-md-6 col-lg-3 fade-in">
+                <div class="col-md-6 col-lg-3" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="100">
                     <div class="skill-card">
                         <i class="bi bi-filetype-html skill-icon"></i>
                         <h4 class="skill-name">HTML</h4>
@@ -633,7 +583,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3 fade-in">
+                <div class="col-md-6 col-lg-3" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="200">
                     <div class="skill-card">
                         <i class="bi bi-filetype-css skill-icon"></i>
                         <h4 class="skill-name">CSS</h4>
@@ -643,7 +593,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3 fade-in">
+                <div class="col-md-6 col-lg-3" data-aos="flip-right" data-aos-duration="1000" data-aos-delay="300">
                     <div class="skill-card">
                         <i class="bi bi-bootstrap skill-icon"></i>
                         <h4 class="skill-name">Bootstrap</h4>
@@ -653,7 +603,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3 fade-in">
+                <div class="col-md-6 col-lg-3" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="400">
                     <div class="skill-card">
                         <i class="bi bi-filetype-js skill-icon"></i>
                         <h4 class="skill-name">JavaScript</h4>
@@ -670,12 +620,12 @@
     <!-- Experience Section -->
     <section id="experience" class="section">
         <div class="container">
-            <div class="text-center mb-5 fade-in">
-                <h2 class="section-title mx-auto">My Experience</h2>
-                <p class="section-subtitle">My professional journey</p>
+            <div class="text-center mb-5">
+                <h2 class="section-title mx-auto" data-aos="fade-down" data-aos-duration="1000">My Experience</h2>
+                <p class="section-subtitle" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">My professional journey</p>
             </div>
             <div class="timeline">
-                <div class="timeline-item fade-in">
+                <div class="timeline-item" data-aos="fade-left" data-aos-duration="1000">
                     <div class="timeline-date">Aug 2025 - Present</div>
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
@@ -696,12 +646,12 @@
     <!-- Projects Section -->
     <section id="projects" class="section skills-section">
         <div class="container">
-            <div class="text-center mb-5 fade-in">
-                <h2 class="section-title mx-auto">My Projects</h2>
-                <p class="section-subtitle">Some of my recent work</p>
+            <div class="text-center mb-5">
+                <h2 class="section-title mx-auto" data-aos="slide-up" data-aos-duration="1000">My Projects</h2>
+                <p class="section-subtitle" data-aos="slide-up" data-aos-duration="1000" data-aos-delay="200">Some of my recent work</p>
             </div>
             <div class="row g-4">
-                <div class="col-md-6 col-lg-4 fade-in">
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
                     <div class="project-card">
                         <img src="Screenshot 2025-10-15 142026.png">
                         <div class="project-content">
@@ -717,7 +667,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 fade-in">
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
                     <div class="project-card">
                         <img src="enslaved.png">
                         <div class="project-content">
@@ -734,7 +684,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 fade-in">
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
                     <div class="project-card">
                         <img src="Screenshot 2025-10-15 141704.png">
                         <div class="project-content">
@@ -752,8 +702,8 @@
                     </div>
                 </div>
             </div>
-            <div class="text-center mt-5 fade-in">
-                <a href="https://github.com/G-Mustafa9500" class="btn btn-primary-custom btn-lg" target="_blank">
+            <div class="text-center mt-5">
+                <a href="https://github.com/G-Mustafa9500" class="btn btn-primary-custom btn-lg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" target="_blank">
                     <i class="bi bi-github me-2"></i>View More Projects on GitHub
                 </a>
             </div>
@@ -763,12 +713,12 @@
     <!-- Contact Section -->
     <section id="contact" class="section contact-section">
         <div class="container">
-            <div class="text-center mb-5 fade-in">
-                <h2 class="section-title mx-auto text-white">Get In Touch</h2>
-                <p class="section-subtitle text-white-50">Feel free to contact me for any inquiries</p>
+            <div class="text-center mb-5">
+                <h2 class="section-title mx-auto text-white" data-aos="fade-up" data-aos-duration="1000">Get In Touch</h2>
+                <p class="section-subtitle text-white-50" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Feel free to contact me for any inquiries</p>
             </div>
             <div class="row">
-                <div class="col-lg-5 mb-4 mb-lg-0 fade-in">
+                <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-right" data-aos-duration="1000">
                     <div class="contact-info">
                         <i class="bi bi-envelope-fill contact-icon"></i>
                         <div>
@@ -800,100 +750,99 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-7 fade-in">
-<form class="contact-form" id="sheetdb-form" action="https://sheetdb.io/api/v1/mhd7hj1gvpr5w" method="POST">
-  <div class="row">
-    <div class="col-md-6">
-      <label for="name" class="form-label">Your Name</label>
-      <input type="text" class="form-control" id="name" name="Name" placeholder="Enter Your Name" required>
-    </div>
-    <div class="col-md-6">
-      <label for="email" class="form-label">Your Email</label>
-      <input type="email" class="form-control" id="email" name="Email" placeholder="Enter Your Email" required>
-    </div>
-  </div>
+                <div class="col-lg-7" data-aos="fade-left" data-aos-duration="1000">
+                    <form class="contact-form" id="sheetdb-form" action="https://sheetdb.io/api/v1/mhd7hj1gvpr5w" method="POST">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="name" class="form-label">Your Name</label>
+                                <input type="text" class="form-control" id="name" name="Name" placeholder="Enter Your Name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">Your Email</label>
+                                <input type="email" class="form-control" id="email" name="Email" placeholder="Enter Your Email" required>
+                            </div>
+                        </div>
 
-  <div class="mt-3">
-    <label for="subject" class="form-label">Subject</label>
-    <input type="text" class="form-control" id="subject" name="Subject" placeholder="How can I help you?" required>
-  </div>
+                        <div class="mt-3">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" class="form-control" id="subject" name="Subject" placeholder="How can I help you?" required>
+                        </div>
 
-  <div class="mt-3">
-    <label for="message" class="form-label">Message</label>
-    <textarea class="form-control" id="message" name="Message" rows="5" placeholder="Your message here..." required></textarea>
-  </div>
+                        <div class="mt-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" name="Message" rows="5" placeholder="Your message here..." required></textarea>
+                        </div>
 
-  <div class="mt-4 text-center">
-    <button type="submit" class="btn btn-submit">Send Message</button>
-  </div>
-</form>
+                        <div class="mt-4 text-center">
+                            <button type="submit" class="btn btn-submit">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</div>
-</div>
-</div>
-</section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2023 Ghulam Mustafa. All Rights Reserved.</p>
+            <p class="mb-0 mt-2">Designed with <i class="bi bi-heart-fill text-danger"></i> by Ghulam Mustafa</p>
+        </div>
+    </footer>
 
-<!-- Footer -->
-<footer class="footer">
-  <div class="container text-center">
-    <p class="mb-0">&copy; 2023 Ghulam Mustafa. All Rights Reserved.</p>
-    <p class="mb-0 mt-2">Designed with <i class="bi bi-heart-fill text-danger"></i> by Ghulam Mustafa</p>
-  </div>
-</footer>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Animate.css for popup animation (optional but nice) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
-<!-- SweetAlert2 -->
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Contact Form Script -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
 
-<!-- Animate.css for popup animation (optional but nice) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        const form = document.getElementById('sheetdb-form');
 
-<!-- Contact Form Script -->
-<script>
-  const form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", e => {
+            e.preventDefault();
 
-  form.addEventListener("submit", e => {
-    e.preventDefault();
-
-    fetch(form.action, {
-      method: "POST",
-      body: new FormData(form),
-    })
-    .then(response => response.json())
-    .then(json => {
-      Swal.fire({
-        title: '✅ Message Sent!',
-        text: 'Thank you for contacting me. I will get back to you soon!',
-        icon: 'success',
-        background: '#f9f9f9',
-        color: '#333',
-        confirmButtonColor: '#3085d6',
-        showClass: { popup: 'animate__animated animate__fadeInDown' },
-        hideClass: { popup: 'animate__animated animate__fadeOutUp' }
-      });
-      form.reset();
-    })
-    .catch(error => {
-      Swal.fire({
-        title: '❌ Error!',
-        text: 'Something went wrong while submitting your form.',
-        icon: 'error',
-        confirmButtonColor: '#d33'
-      });
-    });
-  });
-</script>
-
+            fetch(form.action, {
+                method: "POST",
+                body: new FormData(form),
+            })
+            .then(response => response.json())
+            .then(json => {
+                Swal.fire({
+                    title: '✅ Message Sent!',
+                    text: 'Thank you for contacting me. I will get back to you soon!',
+                    icon: 'success',
+                    background: '#f9f9f9',
+                    color: '#333',
+                    confirmButtonColor: '#3085d6',
+                    showClass: { popup: 'animate__animated animate__fadeInDown' },
+                    hideClass: { popup: 'animate__animated animate__fadeOutUp' }
+                });
+                form.reset();
+            })
+            .catch(error => {
+                Swal.fire({
+                    title: '❌ Error!',
+                    text: 'Something went wrong while submitting your form.',
+                    icon: 'error',
+                    confirmButtonColor: '#d33'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
